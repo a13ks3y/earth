@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: #f90;
+    font-size: 200%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+body:after {
+    display: none;
+    content: '';
+    background-image: url("assets/Planet-Earth-Control-Panel-Eleanor-Lutz.gif");
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5;
+}
+header {
+    border: 1px solid green;
+
+}
+main {
+
+}
+section {
+    border: 1px solid green;
+    padding: 1.666rem;
+    display: flex;
+}
+section nav {
+    padding: 1rem 3rem;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    cursor: pointer;
+    /*display: inline-block;*/
+}
+section article {
+}
+
+.img_earth {
+    width: 18rem;
+    float: right;
+}
