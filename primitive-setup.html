@@ -68,6 +68,7 @@
                     allowfullscreen>
             </iframe>
             <div class="controls">
+                <div id="time"></div>
                 <button>The Button 1</button>
                 <button>Another Button</button>
                 <button>The Button 2</button>
@@ -163,6 +164,12 @@
   "debug_date": "Sun Nov 01 2020 20:44:48 GMT+0200 (Восточная Европа, стандартное время)"
 }
 -->
-
+<script type="text/javascript">
+    var timeEl = document.getElementById('time');
+    setInterval(function(){
+      var now = new Date();
+      timeEl.innerHTML = now;
+    }, 1000);
+</script>
 </body>
 </html>
