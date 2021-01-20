@@ -2,48 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Earth Control Panel</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Planet Earth Control Deck</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: #f90;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+        aside {
+            max-height: 100vh;
+            overflow: hidden;
+            /*border-right: solid green 8px;*/
+        }
+        aside img {
+            max-width: 100vw;
+        }
+        @media screen AND (min-width: 600px) {
+            .wrapper {
+                flex-direction: row;
+            }
+            aside {
+
+            }
+            aside img {
+                max-width: 52vw;
+            }
+        }
+        main {
+            flex: 1 1;
+            padding: 1.666rem;
+        }
+
+        button {
+            border: 1px solid gray;
+            font-size: 1.666rem;
+            text-transform: uppercase;
+            color: #f90;
+            background: black;
+            padding: 1.666rem;
+            margin: 0.666rem;
+        }
+
+        .controls {
+            padding: 1.666rem;
+            border: solid 1px lightsteelblue;
+        }
+    </style>
 </head>
 <body>
-<!--<iframe src="http://produktoff.com/" width="100%" height="100%" frameborder="0"></iframe>-->
-    <header>
-        <h1>Earth Control Panel</h1>
-        <img class="img_earth" src="assets/The_Earth_seen_from_Apollo_17.jpg" alt="The Earth seen from Apollo 17">
-        <ul class="props">
-            <li>Diameter: <span class="value">6370km</span></li>
-            <li>Diameter: <span class="value">6370km</span></li>
-            <li>Diameter: <span class="value">6370km</span></li>
-            <li>Diameter: <span class="value">6370km</span></li>
-            <li>Diameter: <span class="value">6370km</span></li>
-        </ul>
-    </header>
+<div class="wrapper">
+    <aside>
+        <img src="assets/Planet-Earth-Control-Panel-Eleanor-Lutz.gif" alt="The Deck." />
+    </aside>
     <main>
-        <section>
-            <nav>
-                <ul>
-                    <li>Navigation Item 0</li>
-                    <li>Navigation Item 1</li>
-                    <li>Navigation Item 2</li>
-                    <li>Navigation Item 3</li>
-                    <li>Navigation Item 4</li>
-                </ul>
-            </nav>
-            <article>
-                <h1>Fuck you asshole</h1>
-                <p>Lorem ipsum huipsum dominos huyominos...</p>
-                <p>Lorem ipsum huipsum dominos huyominos...</p>
-                <p>Lorem ipsum huipsum dominos huyominos...</p>
-                <p>Lorem ipsum huipsum dominos huyominos...</p>
-            </article>
-        </section>
+        <iframe width="100%"
+                height="480"
+                src="https://www.youtube.com/embed/XBPjVzSoepo?controls=1"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+        <div class="controls">
+            <div id="time"></div>
+            <button onclick="alert('This function is not implemented yet.');">🤔</button>
+            <button onclick="alert('This function is not implemented yet.');">🤷‍</button>
+            <button onclick="alert('This function is not implemented yet.');">😜</button>
+        </div>
     </main>
-    <footer>
-        <p>Footer. What Should Be in the FOOTER??!!!! AAAA!!!</p>
-    </footer>
-    <script type="text/javascript">
-        // So, there should be some requests to NASA (and others) APIs, some calculations,
-        // to show live info about Earth placement, temperature, etc.
-    </script>
+</div>
+<script type="text/javascript">
+    const timeEl = document.getElementById('time');
+    setInterval(function(){
+        const now = new Date();
+        timeEl.innerHTML = now.toLocaleString();
+    }, 1000);
+</script>
 </body>
 </html>
